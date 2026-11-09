@@ -36,7 +36,11 @@ It scans Python, JavaScript/TypeScript, Go, PHP, and shell files, and skips
 
 ## Install
 
-No install step and no dependencies — Python 3.10+ is enough:
+```sh
+pip install env-example-sync-cli
+```
+
+Or clone from GitHub instead (Python 3.10+ and git are enough):
 
 ```sh
 git clone https://github.com/haiderstudio/env-example-sync-cli.git
