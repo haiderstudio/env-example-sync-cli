@@ -14,7 +14,7 @@ and forgets `.env.example`, and the next developer's setup breaks silently.
 - **Extra** — documented in `.env.example`, but no longer used in code.
 - **Exit code 1 on drift, 0 when in sync** — so it works as a CI gate.
 - **`--fix`** appends missing variables to `.env.example` as `NAME=` — no value
-is ever invented, and extra variables are never deleted automatically.
+  is ever invented, and extra variables are never deleted automatically.
 
 It scans Python, JavaScript/TypeScript, Go, PHP, and shell files, and skips
 `node_modules`, `.git`, virtualenvs, and `.env*` files themselves.
@@ -22,21 +22,22 @@ It scans Python, JavaScript/TypeScript, Go, PHP, and shell files, and skips
 ## What it does NOT do
 
 - It does not read, print, or upload any real secret value. It only ever
-reports variable **names**.
+  reports variable **names**.
 - It does not load a real `.env` file, and it never touches one.
 - It does not delete variables from `.env.example` — removing a documented
-variable is a human decision, not an automated one.
+  variable is a human decision, not an automated one.
 - It does not parse code as an AST. It matches text patterns, so a variable
-named only in a comment still counts as used. That is deliberate: it errs
-toward keeping a variable documented rather than deleting it.
+  named only in a comment still counts as used. That is deliberate: it errs
+  toward keeping a variable documented rather than deleting it.
 - Shell scripts only match uppercase names (`$HOME` counts, `$home` does not),
-because lowercase shell words are locals by convention, not env vars.
+  because lowercase shell words are locals by convention, not env vars.
 - It sends nothing anywhere. Everything runs locally, Python standard
-library only.
+  library only.
 
 ## Install
 
 No install step and no dependencies — Python 3.10+ is enough:
+
 ```sh
 git clone https://github.com/haiderstudio/env-example-sync-cli.git
 cd env-example-sync-cli
@@ -120,7 +121,7 @@ the tool's real output on `examples/sample-project`, not a mock.
 
 Similar drift checkers exist, mostly for JavaScript projects: `dotenv-audit`
 (Node, scans JS/TS and can auto-fill `.env.example` with generated
-placeholder values) and `dotenv-linter` (Node, compares `.env` with
+placeholder values) and `dotdrift` (Node, compares `.env` with
 `.env.example`). This tool is the Python-stdlib alternative: it needs no
 Node or npm, covers Python, JS/TS, Go, PHP, and shell in one pass, never
 reads a real `.env` file, and `--fix` appends empty `NAME=` lines only —
