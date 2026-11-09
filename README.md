@@ -2,7 +2,7 @@
 
 Scan code for environment variables, compare with `.env.example`, and fail CI when they drift.
 
-[![CI](https://github.com/hai02487/env-example-sync-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/hai02487/env-example-sync-cli/actions/workflows/ci.yml) [![Licence: MIT](https://img.shields.io/badge/Licence-MIT-yellow.svg)](LICENSE)
+[![CI](https://github.com/haiderstudio/env-example-sync-cli/actions/workflows/ci.yml/badge.svg)](https://github.com/haiderstudio/env-example-sync-cli/actions/workflows/ci.yml) [![Licence: MIT](https://img.shields.io/badge/Licence-MIT-yellow.svg)](LICENSE)
 
 ## What it does
 
@@ -39,7 +39,7 @@ It scans Python, JavaScript/TypeScript, Go, PHP, and shell files, and skips
 No install step and no dependencies — Python 3.10+ is enough:
 
 ```sh
-git clone https://github.com/hai02487/env-example-sync-cli.git
+git clone https://github.com/haiderstudio/env-example-sync-cli.git
 cd env-example-sync-cli
 python3 src/env_example_sync.py --help
 ```
